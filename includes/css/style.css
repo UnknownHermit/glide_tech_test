@@ -15,3 +15,7 @@ li.menuItem a {
     padding: 16px;
     text-decoration: none;
 }
+
+.w100pc{
+    width:100%;
+}

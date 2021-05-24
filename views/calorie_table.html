@@ -1,5 +1,18 @@
 
     <div>
         <h1>Calorific Values</h1>
+        <form method="POST" action="/view_calories.php">
+            <h2>Filters</h2>
+            <label for="dateFrom">From: </label>
+            <input type="date" name="dateFrom" id="dateFrom" value="<?php print $dateFromValue; ?>"/>
+            <label for="dateTo"> To: </label>
+            <input type="date" name="dateTo" id="dateTo" value="<?php print $dateToValue; ?>"/><br/>
+            <label for="dataItem">Data Item:</label>
+            <select name="dataItem" id="dataItem">
+                <?php print $dataItemSelectField; ?>
+            </select><br/>
+            <input type="hidden" name="action" value="applyFilters"/>
+            <input type="submit" value="Search"/>
+        </form>
         <?php print $calorieTable; ?>
     </div>
